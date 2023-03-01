@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/activitiesScreenFragment"
+        android:name="com.example.the_project.fragments.ActivitiesScreenFragment"
+        android:label="fragment_activities_screen"
+        tools:layout="@layout/fragment_activities_screen" >
+        <action
+            android:id="@+id/action_activitiesScreenFragment_self"
+            app:destination="@id/activitiesScreenFragment" />
+        <action
+            android:id="@+id/action_activitiesScreenFragment_to_myTaskScreenFragment"
+            app:destination="@id/myTaskScreenFragment" />
+        <action
+            android:id="@+id/action_activitiesScreenFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_activitiesScreenFragment_to_myTaskScreenFragment2"
+            app:destination="@id/myTaskScreenFragment" />
+        <action
+            android:id="@+id/action_activitiesScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_activitiesScreenFragment_to_myGroupsFragment"
+            app:destination="@id/myGroupsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myTaskScreenFragment"
+        android:name="com.example.the_project.fragments.MyTaskScreenFragment"
+        android:label="fragment_my_task_screen"
+        tools:layout="@layout/fragment_my_task_screen" >
+        <action
+            android:id="@+id/action_myTaskScreenFragment_self"
+            app:destination="@id/myTaskScreenFragment" />
+        <action
+            android:id="@+id/action_myTaskScreenFragment_to_activitiesScreenFragment"
+            app:destination="@id/activitiesScreenFragment" />
+        <action
+            android:id="@+id/action_myTaskScreenFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_myTaskScreenFragment_to_myGroupsFragment"
+            app:destination="@id/myGroupsFragment" />
+        <action
+            android:id="@+id/action_myTaskScreenFragment_self2"
+            app:destination="@id/myTaskScreenFragment" />
+        <action
+            android:id="@+id/action_myTaskScreenFragment_self3"
+            app:destination="@id/myTaskScreenFragment" />
+        <action
+            android:id="@+id/action_myTaskScreenFragment_to_detailsTaskFragment"
+            app:destination="@id/detailsTaskFragment" />
+        <action
+            android:id="@+id/action_myTaskScreenFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.the_project.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_myTaskScreenFragment"
+            app:destination="@id/myTaskScreenFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_activitiesScreenFragment"
+            app:destination="@id/activitiesScreenFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_self2"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_viewProfileFragment"
+            app:destination="@id/viewProfileFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_self3"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_self4"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_myGroupsFragment"
+            app:destination="@id/myGroupsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewProfileFragment"
+        android:name="com.example.the_project.fragments.ViewProfileFragment"
+        android:label="fragment_view_profile"
+        tools:layout="@layout/fragment_view_profile" >
+        <action
+            android:id="@+id/action_viewProfileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_viewProfileFragment_to_updateProfileFragment"
+            app:destination="@id/updateProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProfileFragment"
+        android:name="com.example.the_project.fragments.UpdateProfileFragment"
+        android:label="fragment_update_profile"
+        tools:layout="@layout/fragment_update_profile" >
+        <action
+            android:id="@+id/action_updateProfileFragment_to_viewProfileFragment"
+            app:destination="@id/viewProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.the_project.fragments.UserFragment"
+        android:label="fragment_groups"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_userFragment_to_activitiesScreenFragment"
+            app:destination="@id/activitiesScreenFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_myTaskScreenFragment"
+            app:destination="@id/myTaskScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.the_project.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_activitiesScreenFragment"
+            app:destination="@id/activitiesScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myGroupsFragment"
+        android:name="com.example.the_project.fragments.MyGroupsFragment"
+        android:label="fragment_groups"
+        tools:layout="@layout/fragment_groups" >
+        <action
+            android:id="@+id/action_myGroupsFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_myGroupsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_myGroupsFragment_to_activitiesScreenFragment"
+            app:destination="@id/activitiesScreenFragment" />
+        <action
+            android:id="@+id/action_myGroupsFragment_self"
+            app:destination="@id/myGroupsFragment" />
+        <action
+            android:id="@+id/action_myGroupsFragment_to_myTaskScreenFragment"
+            app:destination="@id/myTaskScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsTaskFragment"
+        android:name="com.example.the_project.fragments.DetailsTaskFragment"
+        android:label="fragment_details_task"
+        tools:layout="@layout/fragment_details_task" />
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.example.the_project.fragments.AddTaskFragment"
+        android:label="fragment_add_task"
+        tools:layout="@layout/fragment_add_task" >
+        <action
+            android:id="@+id/action_addTaskFragment_to_myTaskScreenFragment"
+            app:destination="@id/myTaskScreenFragment" />
+    </fragment>
+</navigation>
